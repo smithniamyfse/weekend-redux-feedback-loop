@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -12,41 +13,85 @@ import "./FeelingForm.css";
 // http://localhost:3000/#/feeling
 
 function FeelingForm() {
+  const dispatch = useDispatch();
+  const history = useHistory();
 
+  const [feeling, setFeeling] = useState(0);
+
+  const clearFeeling = () => {
+    setFeeling('');
+  };
+
+  const goToUnderstanding = () => {
+    history.push("/understanding");
+  };
+
+  const collectUserFeeling = (event) => {
+    event.preventDefault();
+    console.log("Collecting user feeling: ", feeling);
+
+    dispatch({
+      type: "COLLECT_USER_FEEDBACK",
+      payload: { feeling },
+    });
+
+    clearFeeling();
+
+    goToUnderstanding();
+  }; // end collectUserFeeling function
 
   return (
-  <section className="feeling-scale-container">
-  <h2>How are you feeling today?</h2>
-  <div className="feelings-scale-chart">
-    <div>
-      1
-      <br />
-      😢
-    </div>
-    <div>
-      2
-      <br />
-      😞
-    </div>
-    <div>
-      3
-      <br />
-      😐
-    </div>
-    <div>
-      4
-      <br />
-      🙂
-    </div>
-    <div>
-      5
-      <br />
-      😁
-    </div>
-  </div>
-
-  </section>
-
+    <>
+      <section className="feeling-scale-container">
+        <h2>How are you feeling today?</h2>
+        <div className="feelings-scale-chart">
+          <div>
+            1
+            <br />
+            😢
+          </div>
+          <div>
+            2
+            <br />
+            😞
+          </div>
+          <div>
+            3
+            <br />
+            😐
+          </div>
+          <div>
+            4
+            <br />
+            🙂
+          </div>
+          <div>
+            5
+            <br />
+            😁
+          </div>
+        </div>
+      </section>
+      <section className="form-container">
+        <form onSubmit={collectUserFeeling} className="feeling-rating-form">
+          <label htmlFor="rate-feeling">On a scale of 1-5, rate how you feel right now:</label>
+          <br />
+          <input
+            required
+            type="number"
+            id="rate-feeling"
+            name="rate-feeling"
+            value={feeling}
+            onChange={(event) => setFeeling(Number(event.target.value))}
+          />
+          <footer className="form-footer-next">
+            <button className="submit-feeling-button" type="submit">
+              Next
+            </button>
+          </footer>
+        </form>
+      </section>
+    </>
   );
 }
 

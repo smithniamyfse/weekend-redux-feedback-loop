@@ -13,7 +13,7 @@ const userFeedback = (state = [], action) => {
   // Collect user feedback to the userFeedback array
   if (action.type === "COLLECT_USER_FEEDBACK") {
     console.log("User feedback added: ", action.payload);
-    return action.payload;
+    return [...state, action.payload];
   }
   return state;
 };
