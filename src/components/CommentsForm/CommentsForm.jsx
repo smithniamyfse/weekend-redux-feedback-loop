@@ -11,4 +11,8 @@ import "./CommentsForm.css";
 
 // http://localhost:3000/#/comments
 
+function CommentsForm() {
+  
+}
+
 export default CommentsForm;
