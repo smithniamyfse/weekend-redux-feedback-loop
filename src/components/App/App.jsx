@@ -10,8 +10,8 @@ import "./App.css";
 import Header from "../Header/Header.jsx";
 import FeelingForm from "../FeelingForm/FeelingForm";
 import UnderstandingForm from "../UnderstandingForm/UnderstandingForm";
-import SupportForm from '../SupportForm/SupportForm';
-// import CommentsForm from '../CommentsForm/CommentsForm';
+import SupportForm from "../SupportForm/SupportForm";
+import CommentsForm from '../CommentsForm/CommentsForm';
 // import ReviewFormFeedback from '../ReviewFormFeedback/ReviewFormFeedback';
 
 function App() {
@@ -28,14 +28,15 @@ function App() {
           <UnderstandingForm />
         </Route>
 
-      <Route path="/support">
-        <SupportForm />
-      </Route>
-      {/*
-      <Route path="/comments">
-        <CommentsForm />
-      </Route>
-      <Route path="/reviewfeedback">
+        <Route path="/support">
+          <SupportForm />
+        </Route>
+
+        <Route path="/comments">
+          <CommentsForm />
+        </Route>
+        {/*
+      <Route path="/review-feedback">
         <ReviewFormFeedback />
       </Route>
        */}

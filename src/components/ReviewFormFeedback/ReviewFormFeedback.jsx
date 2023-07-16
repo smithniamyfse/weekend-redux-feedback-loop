@@ -9,6 +9,6 @@ import {
 } from "react-router-dom";
 import "./ReviewFormFeedback.css";
 
-// http://localhost:3000/#/reviewfeedback
+// http://localhost:3000/#/review-feedback
 
 export default ReviewFormFeedback;
