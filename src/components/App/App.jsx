@@ -12,7 +12,7 @@ import FeelingForm from "../FeelingForm/FeelingForm";
 import UnderstandingForm from "../UnderstandingForm/UnderstandingForm";
 import SupportForm from "../SupportForm/SupportForm";
 import CommentsForm from '../CommentsForm/CommentsForm';
-// import ReviewFormFeedback from '../ReviewFormFeedback/ReviewFormFeedback';
+import ReviewFormFeedback from '../ReviewFormFeedback/ReviewFormFeedback';
 
 function App() {
   return (
@@ -35,11 +35,11 @@ function App() {
         <Route path="/comments">
           <CommentsForm />
         </Route>
-        {/*
+
       <Route path="/review-feedback">
         <ReviewFormFeedback />
       </Route>
-       */}
+
       </div>
     </Router>
   );

@@ -15,8 +15,8 @@ import "./CommentsForm.css";
 function CommentsForm() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const userFeeling = useSelector((store) => store.feeling);
-  const userUnderstanding = useSelector((store) => store.understanding);
+  // const userFeeling = useSelector((store) => store.feeling);
+  // const userUnderstanding = useSelector((store) => store.understanding);
   const [comments, setComments] = useState('');
 
   const clearComments = () => {

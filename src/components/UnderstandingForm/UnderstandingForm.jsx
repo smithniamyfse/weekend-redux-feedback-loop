@@ -15,7 +15,7 @@ import "./UnderstandingForm.css";
 function UnderstandingForm() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const userFeeling = useSelector((store) => store.feeling);
+  // const userFeeling = useSelector((store) => store.feeling);
   const [understanding, setUnderstanding] = useState(0);
 
   const clearUnderstanding = () => {
