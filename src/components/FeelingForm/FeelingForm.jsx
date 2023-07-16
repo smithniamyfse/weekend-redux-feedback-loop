@@ -17,6 +17,7 @@ function FeelingForm() {
   const history = useHistory();
   const [feeling, setFeeling] = useState(0);
 
+
   const clearFeeling = () => {
     setFeeling(0);
   };

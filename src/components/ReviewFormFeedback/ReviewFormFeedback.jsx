@@ -8,7 +8,6 @@ function ReviewFormFeedback() {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const userFeedbackList = useSelector((store) => store.userFeedbackList);
   const feelingReducer = useSelector((store) => store.feelingReducer);
   const understandingReducer = useSelector((store) => store.understandingReducer);
   const supportReducer = useSelector((store) => store.supportReducer);
@@ -52,14 +51,12 @@ function ReviewFormFeedback() {
             </tr>
           </thead>
           <tbody>
-            {userFeedbackList.map((feedbackEntry, index) => (
-              <tr key={index}>
-                <td>{feedbackEntry.feeling}</td>
-                <td>{feedbackEntry.understanding}</td>
-                <td>{feedbackEntry.support}</td>
-                <td>{feedbackEntry.comments}</td>
+              <tr>
+                <td>{feelingReducer}</td>
+                <td>{understandingReducer}</td>
+                <td>{supportReducer}</td>
+                <td>{commentsReducer}</td>
               </tr>
-            ))}
           </tbody>
         </table>
         <footer className="review-feedback-submit-container">
@@ -77,3 +74,27 @@ function ReviewFormFeedback() {
 }
 
 export default ReviewFormFeedback;
+
+/*
+<table className="review-feedback-table">
+          <thead>
+            <tr>
+              <th>Feeling</th>
+              <th>Understanding</th>
+              <th>Support</th>
+              <th>Comments</th>
+            </tr>
+          </thead>
+          <tbody>
+            {userFeedbackList.map((feedbackEntry, index) => (
+              <tr key={index}>
+                <td>{feedbackEntry.feeling}</td>
+                <td>{feedbackEntry.understanding}</td>
+                <td>{feedbackEntry.support}</td>
+                <td>{feedbackEntry.comments}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+*/
