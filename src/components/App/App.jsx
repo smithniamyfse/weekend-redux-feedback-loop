@@ -9,8 +9,8 @@ import "./App.css";
 // importing Components
 import Header from "../Header/Header.jsx";
 import FeelingForm from "../FeelingForm/FeelingForm";
-// import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
-// import SupportForm from '../SupportForm/SupportForm';
+import UnderstandingForm from "../UnderstandingForm/UnderstandingForm";
+import SupportForm from '../SupportForm/SupportForm';
 // import CommentsForm from '../CommentsForm/CommentsForm';
 // import ReviewFormFeedback from '../ReviewFormFeedback/ReviewFormFeedback';
 
@@ -19,17 +19,19 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        
+
         <Route path="/feeling">
           <FeelingForm />
         </Route>
-        {/*
-      <Route path="/understanding">
-        <UnderstandingForm />
-      </Route>
+
+        <Route path="/understanding">
+          <UnderstandingForm />
+        </Route>
+
       <Route path="/support">
         <SupportForm />
       </Route>
+      {/*
       <Route path="/comments">
         <CommentsForm />
       </Route>
