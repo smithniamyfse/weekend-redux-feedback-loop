@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+div#root {
+  padding: 0;
+}
+
+div.App {
+  padding: 0;
+}
+
+body {
+  background-color: #F2C791;
+}
+
+.table-h2 {
+  margin: 0;
+  padding: 0px 0px 20px 0px;
+}
+
+section.review-feedback-container {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+table.review-feedback-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+table.review-feedback-table th,
+table.review-feedback-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+table.review-feedback-table th {
+  background-color: #f5f5f5;
+}
+
+.review-submit-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 25px;
+  background-color: #72858C;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-feedback-submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6fafd;
+  padding: 40px 0px 40px 0px;
+}
+
+button.submit-feedback-button {
+  background-color: #D9857E;
+  color: black;
+  font-size: 22px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: rgba(242, 199, 145, 0.777) 0px 54px 55px, rgba(242, 199, 145, 0.777) 0px -12px 30px, rgba(114, 133, 140, 0.777) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+  font-family: 'Rubik Dirt', cursive;
+  border: none;
+  border-color: #BF7315;
+}
+
+button.submit-feedback-button:hover {
+  background-color: #a7c4cf;
+  color: black;
+}
+
+button.submit-feedback-button:focus {
+  outline: none;
+}
+
+button.submit-feedback-button:active {
+  transform: translateY(1px);
+}
+
+.dialog-action-button {
+  background-color: #D9857E;
+  color: black;
+  font-size: 22px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: none; /* Remove the box-shadow property */
+  cursor: pointer;
+  font-family: 'Rubik Dirt', cursive;
+  border: none;
+  border-color: #BF7315;
+}
+
+.dialog-action-button:hover {
+  background-color: #a7c4cf;
+  color: black;
+}
+
+.dialog-action-button:focus {
+  outline: none;
+}
+
+.dialog-action-button:active {
+  transform: translateY(1px);
+}
+
+.MuiDialogTitle-root,
+.MuiDialogContent-root,
+.MuiDialogActions-root {
+  padding: 16px;
+}
+
+.MuiDialogActions-root {
+  justify-content: center;
+}
