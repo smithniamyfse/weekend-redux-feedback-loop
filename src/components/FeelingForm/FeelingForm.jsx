@@ -1,23 +1,20 @@
-import React from "react";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+// import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import {
-  HashRouter as Router,
-  Route,
-  Link,
-  useHistory,
-} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Header from "../Header/Header.jsx";
 import "./FeelingForm.css";
-
-// http://localhost:3000/#/
 
 function FeelingForm() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [feeling, setFeeling] = useState('');
-
-
+  const [feeling, setFeeling] = useState("");
 
   const goToUnderstanding = () => {
     history.push("/understanding");
@@ -37,7 +34,7 @@ function FeelingForm() {
 
   return (
     <>
-    <Header />
+      <Header />
       <section className="feeling-scale-container">
         <h2>How are you feeling today?</h2>
         <div className="feelings-scale-chart">
@@ -69,30 +66,66 @@ function FeelingForm() {
         </div>
       </section>
       <section className="feeling-form-container">
-        <form onSubmit={collectUserFeeling} className="feeling-rating-form">
-          <label htmlFor="rate-feeling">
-            On a scale of 1-5, rate how you feel right now:
-          </label>
-          <br />
-          <input
-            required
-            type="number"
-            min="1" 
-            max="5"
-            id="rate-feeling"
-            name="rate-feeling"
-            value={feeling}
-            onChange={(event) => setFeeling(Number(event.target.value))}
-          />
-          <footer className="feeling-form-footer-next">
-            <button className="submit-feeling-button" type="submit">
-              Next
-            </button>
-          </footer>
-        </form>
+        <Card sx={{ maxWidth: 800, padding: "3rem" }}>
+          <CardContent
+            sx={{
+              paddingLeft: 0,
+              paddingRight: 0,
+              // padding: 0,
+              "&:last-child": {
+                paddingBottom: 0, // Set the desired padding-bottom value here
+              },
+            }}
+          >
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              padding="1em"
+            >
+              On a scale of 1-5, rate how you feel right now:
+            </Typography>
+            <form onSubmit={collectUserFeeling} className="feeling-rating-form">
+              <div className="rating-input-container">
+                <input
+                  required
+                  type="number"
+                  min="1"
+                  max="5"
+                  id="rate-feeling"
+                  name="rate-feeling"
+                  value={feeling}
+                  onChange={(event) => setFeeling(Number(event.target.value))}
+                />
+              </div>
+              <CardActions
+                sx={{ justifyContent: "flex-end",
+                  padding: 0,
+                  "&:last-child": {
+                    paddingBottom: 0, // Set the desired padding-bottom value here
+                  },
+                }}
+              >
+                <Button
+                  className="submit-feeling-button"
+                  type="submit"
+                  sx={{
+                    fontSize: "22px",
+                    fontFamily: "'Rubik Dirt', cursive;",
+                    fontWeight: 200,
+                    backgroundColor: "#D9857E",
+                    color: "#000000",
+                  }}
+                >
+                  Next ➡
+                </Button>
+              </CardActions>
+            </form>
+          </CardContent>
+        </Card>
       </section>
     </>
   );
-} // end FeelingForm component
+}
 
 export default FeelingForm;

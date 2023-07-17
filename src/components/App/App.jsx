@@ -1,7 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
-import axios from "axios";
-import { useDispatch } from "react-redux";
 // Shorthand import, {} in import is called destructuring
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
@@ -48,38 +45,3 @@ function App() {
 }
 
 export default App;
-
-/*
-    <Router>
-      <div className="App">
-        <Header />
-
-        <Route path="/feeling">
-          <FeelingForm />
-        </Route>
-
-        <Route path="/understanding">
-          <UnderstandingForm />
-        </Route>
-
-        <Route path="/support">
-          <SupportForm />
-        </Route>
-
-        <Route path="/comments">
-          <CommentsForm />
-        </Route>
-
-      <Route path="/review-feedback">
-        <ReviewFormFeedback />
-      </Route>
-
-      </div>
-    </Router>
-*/
-
-/*
-       <Route path="/feeling">
-          <FeelingForm />
-        </Route>
-*/
