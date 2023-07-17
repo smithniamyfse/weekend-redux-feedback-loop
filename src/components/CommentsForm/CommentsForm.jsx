@@ -8,6 +8,7 @@ import {
   Link,
   useHistory,
 } from "react-router-dom";
+import Header from "../Header/Header.jsx";
 import "./CommentsForm.css";
 
 // http://localhost:3000/#/comments
@@ -42,6 +43,7 @@ function CommentsForm() {
 
     return (
       <>
+      <Header />
       <section className="comments-container">
         <h2>Your voice matters.</h2>
         <h4>Whether it's the ongoing disappearance of granola bars or the fact that flowcharts on the whiteboard help you learn, tell us what impacts you.</h4>

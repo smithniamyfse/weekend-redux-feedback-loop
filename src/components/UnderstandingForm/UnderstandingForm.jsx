@@ -8,6 +8,7 @@ import {
   Link,
   useHistory,
 } from "react-router-dom";
+import Header from "../Header/Header.jsx";
 import "./UnderstandingForm.css";
 
 // http://localhost:3000/#/understanding
@@ -15,8 +16,7 @@ import "./UnderstandingForm.css";
 function UnderstandingForm() {
   const dispatch = useDispatch();
   const history = useHistory();
-  // const userFeeling = useSelector((store) => store.feeling);
-  const [understanding, setUnderstanding] = useState(0);
+  const [understanding, setUnderstanding] = useState(1);
 
   const clearUnderstanding = () => {
     setUnderstanding(0);
@@ -35,7 +35,7 @@ function UnderstandingForm() {
       payload: understanding,
     });
 
-    clearUnderstanding();
+    clearUnderstanding(1);
     goToSupport();
   };
 
@@ -49,6 +49,7 @@ function UnderstandingForm() {
 
   return (
     <>
+    <Header />
       <section className="understanding-scale-container">
         <h2>How well are you understanding the content?</h2>
         <div className="understanding-scale-chart">
@@ -87,6 +88,8 @@ function UnderstandingForm() {
           <input
             required
             type="number"
+            min="1" 
+            max="5"
             id="rate-understanding"
             name="rate-understanding"
             value={understanding}

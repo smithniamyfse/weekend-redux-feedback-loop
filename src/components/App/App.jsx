@@ -11,11 +11,40 @@ import Header from "../Header/Header.jsx";
 import FeelingForm from "../FeelingForm/FeelingForm";
 import UnderstandingForm from "../UnderstandingForm/UnderstandingForm";
 import SupportForm from "../SupportForm/SupportForm";
-import CommentsForm from '../CommentsForm/CommentsForm';
-import ReviewFormFeedback from '../ReviewFormFeedback/ReviewFormFeedback';
+import CommentsForm from "../CommentsForm/CommentsForm";
+import ReviewFormFeedback from "../ReviewFormFeedback/ReviewFormFeedback";
 
 function App() {
   return (
+    <Router>
+      <div className="App">
+        <Route exact path="/">
+          <FeelingForm />
+        </Route>
+
+        <Route path="/understanding">
+          <UnderstandingForm />
+        </Route>
+
+        <Route path="/support">
+          <SupportForm />
+        </Route>
+
+        <Route path="/comments">
+          <CommentsForm />
+        </Route>
+
+        <Route path="/review-feedback">
+          <ReviewFormFeedback />
+        </Route>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+
+/*
     <Router>
       <div className="App">
         <Header />
@@ -42,7 +71,10 @@ function App() {
 
       </div>
     </Router>
-  );
-}
+*/
 
-export default App;
+/*
+       <Route path="/feeling">
+          <FeelingForm />
+        </Route>
+*/
