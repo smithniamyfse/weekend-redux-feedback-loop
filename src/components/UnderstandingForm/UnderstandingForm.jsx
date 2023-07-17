@@ -38,14 +38,6 @@ function UnderstandingForm() {
     goToSupport();
   };
 
-  /*
-1: I cannot understand any of the content. 
-2: I understand only a small portion of the content. 
-3: I understand a moderate amount of the content. 
-4: I understand most of the content and can explain it to others. 
-5: The content is clear to me, and I can teach it to others. 
-  */
-
   return (
     <>
       <Header />
@@ -76,12 +68,11 @@ function UnderstandingForm() {
         </div>
       </section>
       <section className="understanding-form-container">
-        <Card sx={{ maxWidth: 800, padding: "3rem" }}>
+        <Card sx={{ maxWidth: 700, padding: "3rem" }}>
           <CardContent
             sx={{
               paddingLeft: 0,
               paddingRight: 0,
-              // padding: 0,
               "&:last-child": {
                 paddingBottom: 0, // Set the desired padding-bottom value here
               },
@@ -113,7 +104,7 @@ function UnderstandingForm() {
                   justifyContent: "flex-end",
                   padding: 0,
                   "&:last-child": {
-                    paddingBottom: 0, // Set the desired padding-bottom value here
+                    paddingBottom: 0,
                   },
                 }}
               >

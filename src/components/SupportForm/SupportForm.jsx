@@ -1,6 +1,10 @@
-import React from "react";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import {
   HashRouter as Router,
@@ -16,10 +20,7 @@ import "./SupportForm.css";
 function SupportForm() {
   const dispatch = useDispatch();
   const history = useHistory();
-  // const userFeeling = useSelector((store) => store.feeling);
-  // const userUnderstanding = useSelector((store) => store.understanding);
-  const [support, setSupport] = useState('');
-
+  const [support, setSupport] = useState("");
 
   const goToComments = () => {
     history.push("/comments");
@@ -37,68 +38,90 @@ function SupportForm() {
     goToComments();
   };
 
-  /*
-1: I feel unsupported and haven't received the guidance I needed.
-2: I feel somewhat supported, but I could benefit from more guidance.
-3: I feel moderately supported and have received satisfactory guidance.
-4: I feel well supported and have received helpful guidance.
-5: I feel fully supported and have received exceptional guidance.
-
-
-  */
-
   return (
     <>
-    <Header />
+      <Header />
       <section className="support-scale-container">
         <h2>How well are you being supported?</h2>
         <div className="support-scale-chart">
           <div>
-            1
+            <span className="rating-text">1</span>
             <br />I feel unsupported and haven't received the guidance I needed.
           </div>
           <div>
-            2
-            <br />I feel somewhat supported, but I could benefit from more guidance.
+            <span className="rating-text">2</span>
+            <br />I feel somewhat supported, but I could benefit from more
+            guidance.
           </div>
           <div>
-            3
-            <br />I feel moderately supported and have received satisfactory guidance.
+            <span className="rating-text">3</span>
+            <br />I feel moderately supported and have received satisfactory
+            guidance.
           </div>
           <div>
-            4
+            <span className="rating-text">4</span>
             <br />I feel well supported and have received helpful guidance.
           </div>
           <div>
-            5
-            <br />
-            I feel fully supported and have received exceptional guidance.
+            <span className="rating-text">5</span>
+            <br />I feel fully supported and have received exceptional guidance.
           </div>
         </div>
       </section>
       <section className="support-form-container">
-        <form onSubmit={collectUserSupport} className="support-rating-form">
-          <label htmlFor="rate-support">
-            On a scale of 1-5, rate how satisfied you are with the support you
-            have received:
-          </label>
-          <br />
-          <input
-            required
-            type="number"
-            min="1" 
-            max="5"
-            id="rate-support"
-            name="rate-support"
-            value={support}
-            onChange={(event) => setSupport(Number(event.target.value))}
-          />
-          <footer className="support-form-footer-next">
-            <button className="submit-support-button" type="submit">
-              Next
-            </button>
-          </footer>
-        </form>
+        <Card sx={{ maxWidth: 700, padding: "3rem" }}>
+          <CardContent
+            sx={{
+              paddingLeft: 0,
+              paddingRight: 0,
+              "&:last-child": {
+                paddingBottom: 0, // Set the desired padding-bottom value here
+              },
+            }}
+          >
+            <Typography gutterBottom variant="h5" component="div" padding="1em">
+              On a scale of 1-5, rate how satisfied you are with the support you
+              have received:
+            </Typography>
+            <form onSubmit={collectUserSupport} className="support-rating-form">
+              <div className="support-rating-input-container">
+                <input
+                  required
+                  type="number"
+                  min="1"
+                  max="5"
+                  id="rate-support"
+                  name="rate-support"
+                  value={support}
+                  onChange={(event) => setSupport(Number(event.target.value))}
+                />
+              </div>
+              <CardActions
+                sx={{
+                  justifyContent: "flex-end",
+                  padding: 0,
+                  "&:last-child": {
+                    paddingBottom: 0,
+                  },
+                }}
+              >
+                <Button
+                  className="submit-support-button"
+                  type="submit"
+                  sx={{
+                    fontSize: "22px",
+                    fontFamily: "'Rubik Dirt', cursive;",
+                    fontWeight: 200,
+                    backgroundColor: "#D9857E",
+                    color: "#000000",
+                  }}
+                >
+                  Next ➡
+                </Button>
+              </CardActions>
+            </form>
+          </CardContent>
+        </Card>
       </section>
     </>
   );

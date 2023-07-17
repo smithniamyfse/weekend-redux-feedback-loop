@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
+
+div#root {
+  padding: 0;
+}
+
+div.App {
+  padding: 0;
+}
+
+body {
+  background-color: #f2c791;
+}
+
+.comment-h2 {
+  margin: 0;
+  padding: 40px 0px 10px 0px;
+}
+
+section.comments-container {
+  background-color: #ffffff;
+}
+
+section.comments-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0px 150px 40px 150px;
+  background-color: #ffffff;
+  font-size: 18px;
+}
+
+.comment-h4 {
+  margin: 0;
+  padding: 10px 0px 0px 0px;
+}
+
+.comments-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #72858c;
+  padding: 40px 0px 40px 0px;
+}
+
+.comments-text-input-container {
+  max-width: 100%;
+  margin-bottom: 8.4px;
+  padding-bottom: 24px;
+}
+
+input[type="text"] {
+  width: 100%;
+  width: calc(100% - 15%);
+  border-radius: 4px;
+  border: 0;
+  font-size: 20px;
+  padding: 8px;
+  font-family: "bryant-web", bryant, sans-serif;
+  box-shadow: 0 0 0 1pt #eee;
+  transition: box-shadow 0.3s;
+  background-color: #f6fafd;
+}
+
+button {
+  background-color: #f2ac29;
+  color: black;
+  border: 2px solid #bf7315;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  box-shadow: rgba(242, 199, 145, 0.777) 0px 54px 55px,
+    rgba(242, 199, 145, 0.777) 0px -12px 30px,
+    rgba(114, 133, 140, 0.777) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+  font-family: "Rubik Dirt", cursive;
+}

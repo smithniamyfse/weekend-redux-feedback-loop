@@ -29,6 +29,7 @@ section.feeling-scale-container {
     padding: 20px 150px 40px 150px;
     background-color: #FFFFFF;
     font-size: 24px;
+    align-items: flex-start;
 }
 
 .feeling-form-container {

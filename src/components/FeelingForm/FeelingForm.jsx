@@ -70,12 +70,11 @@ function FeelingForm() {
         </div>
       </section>
       <section className="feeling-form-container">
-        <Card sx={{ maxWidth: 800, padding: "3rem" }}>
+        <Card sx={{ maxWidth: 600, padding: "3rem" }}>
           <CardContent
             sx={{
               paddingLeft: 0,
               paddingRight: 0,
-              // padding: 0,
               "&:last-child": {
                 paddingBottom: 0, // Set the desired padding-bottom value here
               },
