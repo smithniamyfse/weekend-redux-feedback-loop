@@ -71,3 +71,7 @@ input[type="number"] {
     font-family: 'Rubik Dirt', cursive;
 }
 
+button.submit-feeling-button:hover {
+  background-color: #F2AC29;
+  color: black;
+}

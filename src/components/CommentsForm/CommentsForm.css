@@ -77,3 +77,8 @@ button {
   cursor: pointer;
   font-family: "Rubik Dirt", cursive;
 }
+
+button.submit-comments-button:hover {
+  background-color: #F2AC29;
+  color: black;
+}

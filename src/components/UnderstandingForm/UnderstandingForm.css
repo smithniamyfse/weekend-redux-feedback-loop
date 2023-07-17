@@ -80,13 +80,7 @@ input[type="number"] {
     font-family: 'Rubik Dirt', cursive;
 }
 
-
-
-/*
-.understanding-scale-chart {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-}
-*/
+button.submit-understanding-button:hover {
+    background-color: #F2AC29;
+    color: black;
+  }

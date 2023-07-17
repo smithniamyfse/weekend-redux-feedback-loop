@@ -80,3 +80,8 @@ button {
   cursor: pointer;
   font-family: "Rubik Dirt", cursive;
 }
+
+button.submit-support-button:hover {
+  background-color: #F2AC29;
+  color: black;
+}
