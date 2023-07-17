@@ -15,7 +15,7 @@ import "./FeelingForm.css";
 function FeelingForm() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [feeling, setFeeling] = useState(1);
+  const [feeling, setFeeling] = useState('');
 
 
 

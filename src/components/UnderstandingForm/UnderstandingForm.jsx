@@ -16,7 +16,7 @@ import "./UnderstandingForm.css";
 function UnderstandingForm() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [understanding, setUnderstanding] = useState(1);
+  const [understanding, setUnderstanding] = useState('');
 
 
   const goToSupport = () => {

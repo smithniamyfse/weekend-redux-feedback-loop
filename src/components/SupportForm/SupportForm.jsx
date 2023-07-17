@@ -18,7 +18,7 @@ function SupportForm() {
   const history = useHistory();
   // const userFeeling = useSelector((store) => store.feeling);
   // const userUnderstanding = useSelector((store) => store.understanding);
-  const [support, setSupport] = useState(1);
+  const [support, setSupport] = useState('');
 
 
   const goToComments = () => {
