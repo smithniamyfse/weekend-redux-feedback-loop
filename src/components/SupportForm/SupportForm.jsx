@@ -20,9 +20,6 @@ function SupportForm() {
   // const userUnderstanding = useSelector((store) => store.understanding);
   const [support, setSupport] = useState(1);
 
-  const clearSupport = () => {
-    setSupport(1);
-  };
 
   const goToComments = () => {
     history.push("/comments");
@@ -37,7 +34,6 @@ function SupportForm() {
       payload: support,
     });
 
-    clearSupport();
     goToComments();
   };
 

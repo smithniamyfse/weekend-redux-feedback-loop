@@ -18,9 +18,6 @@ function FeelingForm() {
   const [feeling, setFeeling] = useState(1);
 
 
-  const clearFeeling = () => {
-    setFeeling(1);
-  };
 
   const goToUnderstanding = () => {
     history.push("/understanding");
@@ -35,7 +32,6 @@ function FeelingForm() {
       payload: feeling,
     });
 
-    clearFeeling();
     goToUnderstanding();
   };
 

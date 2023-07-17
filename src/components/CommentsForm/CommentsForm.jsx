@@ -20,9 +20,6 @@ function CommentsForm() {
   // const userUnderstanding = useSelector((store) => store.understanding);
   const [comments, setComments] = useState('');
 
-  const clearComments = () => {
-    setComments('');
-  };
 
   const goToReviewFeedback = () => {
     history.push("/review-feedback")
@@ -36,8 +33,6 @@ function CommentsForm() {
       type: "SET_COMMENTS",
       payload: comments,
     });
-
-    clearComments();
     goToReviewFeedback();
     };
 

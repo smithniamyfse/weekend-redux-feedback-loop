@@ -18,9 +18,6 @@ function UnderstandingForm() {
   const history = useHistory();
   const [understanding, setUnderstanding] = useState(1);
 
-  const clearUnderstanding = () => {
-    setUnderstanding(0);
-  };
 
   const goToSupport = () => {
     history.push("/support");
@@ -35,7 +32,6 @@ function UnderstandingForm() {
       payload: understanding,
     });
 
-    clearUnderstanding(1);
     goToSupport();
   };
 

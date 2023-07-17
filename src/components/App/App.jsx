@@ -13,6 +13,7 @@ import UnderstandingForm from "../UnderstandingForm/UnderstandingForm";
 import SupportForm from "../SupportForm/SupportForm";
 import CommentsForm from "../CommentsForm/CommentsForm";
 import ReviewFormFeedback from "../ReviewFormFeedback/ReviewFormFeedback";
+import FeedbackSubmitted from "../FeedbackSubmitted/FeedbackSubmitted";
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
 
         <Route path="/review-feedback">
           <ReviewFormFeedback />
+        </Route>
+
+        <Route path="/feedback-submitted">
+          <FeedbackSubmitted />
         </Route>
       </div>
     </Router>
