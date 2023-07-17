@@ -1,6 +1,10 @@
-import React from "react";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import {
   HashRouter as Router,
@@ -16,8 +20,7 @@ import "./UnderstandingForm.css";
 function UnderstandingForm() {
   const dispatch = useDispatch();
   const history = useHistory();
-  const [understanding, setUnderstanding] = useState('');
-
+  const [understanding, setUnderstanding] = useState("");
 
   const goToSupport = () => {
     history.push("/support");
@@ -45,177 +48,95 @@ function UnderstandingForm() {
 
   return (
     <>
-    <Header />
+      <Header />
       <section className="understanding-scale-container">
         <h2>How well are you understanding the content?</h2>
         <div className="understanding-scale-chart">
           <div>
-            1
+            <span className="rating-text">1</span>
             <br />I cannot understand any of the content.
           </div>
           <div>
-            2
+            <span className="rating-text">2</span>
             <br />I understand only a small portion of the content.
           </div>
           <div>
-            3
+            <span className="rating-text">3</span>
             <br />I understand a moderate amount of the content.
           </div>
           <div>
-            4
+            <span className="rating-text">4</span>
             <br />I understand most of the content and can explain it to others.
           </div>
           <div>
-            5
+            <span className="rating-text">5</span>
             <br />
             The content is clear to me, and I can teach it to others.
           </div>
         </div>
       </section>
       <section className="understanding-form-container">
-        <form
-          onSubmit={collectUserUnderstanding}
-          className="understanding-rating-form"
-        >
-          <label htmlFor="rate-understanding">
-            On a scale of 1-5, rate how well you understand the content:
-          </label>
-          <br />
-          <input
-            required
-            type="number"
-            min="1" 
-            max="5"
-            id="rate-understanding"
-            name="rate-understanding"
-            value={understanding}
-            onChange={(event) => setUnderstanding(Number(event.target.value))}
-          />
-          <footer className="understanding-form-footer-next">
-            <button className="submit-understanding-button" type="submit">
-              Next
-            </button>
-          </footer>
-        </form>
+        <Card sx={{ maxWidth: 800, padding: "3rem" }}>
+          <CardContent
+            sx={{
+              paddingLeft: 0,
+              paddingRight: 0,
+              // padding: 0,
+              "&:last-child": {
+                paddingBottom: 0, // Set the desired padding-bottom value here
+              },
+            }}
+          >
+            <Typography gutterBottom variant="h5" component="div" padding="1em">
+              On a scale of 1-5, rate how well you understand the content:
+            </Typography>
+            <form
+              onSubmit={collectUserUnderstanding}
+              className="understanding-rating-form"
+            >
+              <div className="understanding-rating-input-container">
+                <input
+                  required
+                  type="number"
+                  min="1"
+                  max="5"
+                  id="rate-understanding"
+                  name="rate-understanding"
+                  value={understanding}
+                  onChange={(event) =>
+                    setUnderstanding(Number(event.target.value))
+                  }
+                />
+              </div>
+              <CardActions
+                sx={{
+                  justifyContent: "flex-end",
+                  padding: 0,
+                  "&:last-child": {
+                    paddingBottom: 0, // Set the desired padding-bottom value here
+                  },
+                }}
+              >
+                <Button
+                  className="submit-understanding-button"
+                  type="submit"
+                  sx={{
+                    fontSize: "22px",
+                    fontFamily: "'Rubik Dirt', cursive;",
+                    fontWeight: 200,
+                    backgroundColor: "#D9857E",
+                    color: "#000000",
+                  }}
+                >
+                  Next ➡
+                </Button>
+              </CardActions>
+            </form>
+          </CardContent>
+        </Card>
       </section>
     </>
   );
-}; // end UnderstandingForm component
-
-export default UnderstandingForm;
-
-/*
-import React from "react";
-import { useState } from "react";
-import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
-import {
-  HashRouter as Router,
-  Route,
-  Link,
-  useHistory,
-} from "react-router-dom";
-import "./UnderstandingForm.css";
-
-// http://localhost:3000/#/understanding
-
-function UnderstandingForm() {
-  const dispatch = useDispatch();
-  const history = useHistory();
-
-  // useSelector hook to grab feedback data from Redux store
-  const userFeedback = useSelector(store => store.userFeedback)
-
-  const [understanding, setUnderstanding] = useState(0);
-
-  const clearUnderstanding = () => {
-    setUnderstanding(0);
-  };
-
-  const goToSupport = () => {
-    history.push("/support");
-  };
-
-  const collectUserUnderstanding = (event) => {
-    event.preventDefault();
-    console.log("Collecting user understanding rating: ", understanding);
-
-    dispatch({
-      type: "COLLECT_USER_FEEDBACK",
-      payload: {
-      feeling: userFeedback.feeling, 
-      understanding
-      }
-      });
-
-    // clearUnderstanding();
-
-    goToSupport();
-  }; // end collectUserUnderstanding function
-
-  
-1: I cannot understand any of the content. 
-2: I understand only a small portion of the content. 
-3: I understand a moderate amount of the content. 
-4: I understand most of the content and can explain it to others. 
-5: The content is clear to me, and I can teach it to others. 
-  
-
-return (
-  <>
-    <section className="understanding-scale-container">
-      <h2>How well are you understanding the content?</h2>
-      <div className="understanding-scale-chart">
-        <div>
-          1
-          <br />I cannot understand any of the content.
-        </div>
-        <div>
-          2
-          <br />I understand only a small portion of the content.
-        </div>
-        <div>
-          3
-          <br />I understand a moderate amount of the content.
-        </div>
-        <div>
-          4
-          <br />I understand most of the content and can explain it to others.
-        </div>
-        <div>
-          5
-          <br />
-          The content is clear to me, and I can teach it to others.
-        </div>
-      </div>
-    </section>
-    <section className="understanding-form-container">
-      <form
-        onSubmit={collectUserUnderstanding}
-        className="understanding-rating-form"
-      >
-        <label htmlFor="rate-understanding">
-          On a scale of 1-5, rate how well you understand the content:
-        </label>
-        <br />
-        <input
-          required
-          type="number"
-          id="rate-understanding"
-          name="rate-understanding"
-          value={understanding}
-          onChange={(event) => setUnderstanding(Number(event.target.value))}
-        />
-        <footer className="understanding-form-footer-next">
-          <button className="submit-understanding-button" type="submit">
-            Next
-          </button>
-        </footer>
-      </form>
-    </section>
-  </>
-);
 } // end UnderstandingForm component
 
 export default UnderstandingForm;
-*/

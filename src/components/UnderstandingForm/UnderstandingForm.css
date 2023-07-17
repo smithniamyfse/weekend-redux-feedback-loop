@@ -1,6 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+div#root {
+    padding: 0;
+}
+
+div.App {
+    padding: 0;
+}
+
+body {
+    background-color: #F2C791;
+}
+
+h2 {
+    margin: 0;
+    padding: 40px 20px 20px;
+}
+
+section.understanding-scale-container {
+    background-color: #FFFFFF;
+}
+
+.rating-text {
+    font-size: 24px;
+}
+
+
+.understanding-scale-chart {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px 25px 40px 25px;
+    background-color: #FFFFFF;
+    font-size: 18px;
+}
+
+div {
+    padding: 0px 15px;
+}
+
+.understanding-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #72858C;
+    padding: 40px 0px 40px 0px;
+  }
+
+  .understanding-rating-input-container {
+    margin-bottom: 8.4px;
+    padding-bottom: 24px;
+  }
+
+
+input[type="number"] {
+    width: 50%;
+    width: calc(50% - 15%);
+    border-radius: 4px;
+    border: 0;
+    font-size: 24px;
+    padding: 8px;
+    font-family: "bryant-web", bryant, sans-serif;
+    box-shadow: 0 0 0 1pt #eee;
+    transition: box-shadow 0.3s;
+    background-color: #f6fafd;
+  }
+
+  button {
+    background-color: #F2AC29;
+    color: black;
+    border: 2px solid #BF7315;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    box-shadow: rgba(242, 199, 145, 0.777) 0px 54px 55px, rgba(242, 199, 145, 0.777) 0px -12px 30px, rgba(114, 133, 140, 0.777) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    cursor: pointer;
+    font-family: 'Rubik Dirt', cursive;
+}
+
+
+
+/*
 .understanding-scale-chart {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
 }
+*/
