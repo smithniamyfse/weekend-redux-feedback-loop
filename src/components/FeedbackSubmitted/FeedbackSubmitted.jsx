@@ -18,8 +18,8 @@ function FeedbackSubmitted() {
         <>
         <Header />
         <section className="feedback-submitted-container">
-            <h2>Thank you.</h2>
-            <h4>You are appreciated and so is your feedback.</h4>
+            <h2>Thank you for submitting your feedback.</h2>
+            <h4>You are appreciated and so is your insight.</h4>
         </section>
         <section className="new-feedback-container">
             <div>

@@ -1,13 +1,13 @@
 # Redux Feedback Loop
 
 For this assignment, you will be creating a reflection/feedback form modeled after Prime's system. 
-- [] 1. Feedback will be collected over 4 views. 
-        - [] a. feeling
-        - [] b. understanding
-        - [] c. support
-        - [] d. comments
-- [] 2. In a separate review page, display the current feedback values and a submit button.  
-- [] 3. When all steps are complete, your app will save the feedback in the database. 
+- [x] 1. Feedback will be collected over 4 views. 
+        - [x] a. feeling
+        - [x] b. understanding
+        - [x] c. support
+        - [x] d. comments
+- [x] 2. In a separate review page, display the current feedback values and a submit button.  
+- [x] 3. When all steps are complete, your app will save the feedback in the database. 
 
 ### SETUP
 
