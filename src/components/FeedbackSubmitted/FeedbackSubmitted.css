@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+div#root {
+  padding: 0;
+}
+
+div.App {
+  padding: 0;
+}
+
+body {
+  background-color: #F2C791;
+}
+
+.submitted-h2 {
+  margin: 0;
+  padding: 0px 0px 10px 0px;
+}
+
+.submitted-h4 {
+    margin: 0;
+    padding: 10px 0px 0px 0px;
+}
+
+section.feedback-submitted-container {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+
+
+.new-feedback-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 25px;
+  background-color: #72858C;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-feedback-submit-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6fafd;
+  padding: 40px 0px 40px 0px;
+}
+
+button.new-feedback-button {
+  background-color: #F28F55;
+  color: black;
+  font-size: 22px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: rgba(114, 133, 140, 0.777) 0px 54px 55px, rgba(114, 133, 140, 0.777) 0px -12px 30px, rgba(114, 133, 140, 0.777) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  cursor: pointer;
+  font-family: 'Rubik Dirt', cursive;
+  border: none;
+  border-color: #BF7315;
+}
+
+button.new-feedback-button:hover {
+  background-color: #F2AC29;
+  color: black;
+}
+
+button.new-feedback-button:focus {
+  outline: none;
+}
+
+button.new-feedback-button:active {
+  transform: translateY(1px);
+}
+
+
